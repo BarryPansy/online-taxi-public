@@ -16,7 +16,7 @@ public class NumberCodeController {
         System.out.println("size:"+size);
         double mathRandom = (Math.random() * 9 + 1) * Math.pow(10, size - 1);
         int numberCode = (int)mathRandom;
-
+        System.out.println("generator src numberCode:"+numberCode);
         NumberCodeResponse response = new NumberCodeResponse();
         response.setNumberCode(numberCode);
 
