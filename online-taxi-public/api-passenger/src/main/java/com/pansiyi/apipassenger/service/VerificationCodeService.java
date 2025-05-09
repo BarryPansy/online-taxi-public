@@ -21,6 +21,11 @@ public class VerificationCodeService {
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
+    /**
+     * 生成验证码
+     * @param passengerPhone 手机号
+     * @return
+     */
     public ResponseResult generateCode(String passengerPhone) {
 
 
@@ -32,5 +37,23 @@ public class VerificationCodeService {
 
 
         return ResponseResult.success();
+    }
+
+    /**
+     * 校验验证码
+     * @param passengerPhont 手机号
+     * @param verificationCode 验证码
+     * @return
+     */
+    public ResponseResult checkCode(String passengerPhont, String verificationCode) {
+        //根据手机号去redis读取验证码
+
+        //校验验证码
+
+        //判断原来是否有用户，并进行对应处理
+
+        //颁布令牌
+
+        return null;
     }
 }
